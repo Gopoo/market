@@ -1,4 +1,4 @@
-package com.flyingstudio.market.fragments.main;
+package com.flyingstudio.market.fragments.main.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.flyingstudio.fscore.app.Flying;
-import com.flyingstudio.fscore.fragment.bottom.ItemFragment;
+import com.flyingstudio.fscore.fragment.FlyingFragment;
 import com.flyingstudio.market.R;
 import com.flyingstudio.market.helper.refresh.HomeRefreshHelper;
 
@@ -25,7 +25,7 @@ import butterknife.OnClick;
  * Created by guopu on 2017/10/11.
  */
 
-public class HomeFragment extends ItemFragment {
+public class HomeFragment extends FlyingFragment {
 
     @BindView(R.id.srl_refresh)
     SwipeRefreshLayout refreshLayout = null;

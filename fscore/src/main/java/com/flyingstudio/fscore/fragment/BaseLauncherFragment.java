@@ -18,7 +18,7 @@ import java.util.TimerTask;
 public abstract class BaseLauncherFragment extends FlyingFragment implements ITimerTask {
 
     protected  Timer timer = null;
-    private  int count = 4;
+    private  int count = 3;
     private final static long DELAY_TIME = 0;
     private final static long PERIOD_TIME = 1000;
     @Override

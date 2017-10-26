@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.flyingstudio.fscore.fragment.bottom.ItemFragment;
+import com.flyingstudio.fscore.fragment.FlyingFragment;
 import com.flyingstudio.market.R;
 import com.flyingstudio.market.database.DatabaseManger;
 import com.flyingstudio.market.database.cart.CartProfile;
@@ -24,7 +24,7 @@ import butterknife.BindView;
  * Created by guopu on 2017/10/11.
  */
 
-public class CartFragment extends ItemFragment {
+public class CartFragment extends FlyingFragment {
 
    @BindView(R.id.tv_title)
    TextView title = null;

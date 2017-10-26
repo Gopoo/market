@@ -24,8 +24,8 @@ import java.util.Map;
 
 public abstract class BottomTabsFragment extends FlyingFragment implements View.OnClickListener {
     private final ArrayList<ItemBean> ITEMS_BEANS = new ArrayList<>();
-    private final ArrayList<ItemFragment> ITEMS = new ArrayList<>();
-    private final LinkedHashMap<ItemBean,ItemFragment> TABS = new LinkedHashMap<>();
+    private final ArrayList<FlyingFragment> ITEMS = new ArrayList<>();
+    private final LinkedHashMap<ItemBean,FlyingFragment> TABS = new LinkedHashMap<>();
     private int mCurrentTab = 0;
     //默认为灰色
     private int mNotPressedColor = 0xFF707070;
@@ -45,7 +45,7 @@ public abstract class BottomTabsFragment extends FlyingFragment implements View.
             BottomTabsHolder builder = BottomTabsHolder.builder();
             setTabs(builder);
             TABS.putAll(builder.getAllTabs());
-            for (Map.Entry<ItemBean,ItemFragment> tab :TABS.entrySet()){
+            for (Map.Entry<ItemBean,FlyingFragment> tab :TABS.entrySet()){
                 ITEMS_BEANS.add(tab.getKey());
                 ITEMS.add(tab.getValue());
             }
@@ -79,7 +79,7 @@ public abstract class BottomTabsFragment extends FlyingFragment implements View.
                 title.setTextColor(mNotPressedColor);
             }
         }
-        final ItemFragment fragments[] = ITEMS.toArray(new ItemFragment[size]);
+        final FlyingFragment fragments[] = ITEMS.toArray(new FlyingFragment[size]);
         getSupportDelegate().loadMultipleRootFragment(R.id.fragment_container,mCurrentTab,fragments);
     }
     private void resetAllItem(){
@@ -88,6 +88,7 @@ public abstract class BottomTabsFragment extends FlyingFragment implements View.
             final LinearLayout item = (LinearLayout) item_container.getChildAt(i);
             final ImageView image = (ImageView) item.getChildAt(0);
             final TextView title = (TextView) item.getChildAt(1);
+
             image.setImageResource(ITEMS_BEANS.get(i).getPhoto());
             title.setTextColor(mNotPressedColor);
 

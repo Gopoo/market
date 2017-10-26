@@ -6,7 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import com.flyingstudio.fscore.fragment.bottom.ItemFragment;
+import com.flyingstudio.fscore.fragment.FlyingFragment;
 import com.flyingstudio.market.R;
 
 import butterknife.BindView;
@@ -16,7 +16,7 @@ import butterknife.BindView;
  * Created by guopu on 2017/10/11.
  */
 
-public class SortFragment extends ItemFragment {
+public class SortFragment extends FlyingFragment {
 
     @BindView(R.id.tl_tabs)
     TabLayout tabs;

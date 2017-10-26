@@ -1,5 +1,7 @@
 package com.flyingstudio.fscore.fragment.bottom;
 
+import com.flyingstudio.fscore.fragment.FlyingFragment;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -7,16 +9,16 @@ import java.util.LinkedHashMap;
  */
 
 public class BottomTabsHolder {
-    private final LinkedHashMap<ItemBean,ItemFragment> TABS = new LinkedHashMap<>();
+    private final LinkedHashMap<ItemBean,FlyingFragment> TABS = new LinkedHashMap<>();
 
     public static final BottomTabsHolder builder(){
         return new BottomTabsHolder();
     }
 
-    public void addTab(ItemBean bean, ItemFragment fragment){
+    public void addTab(ItemBean bean, FlyingFragment fragment){
         TABS.put(bean,fragment);
     }
-    public LinkedHashMap<ItemBean,ItemFragment> getAllTabs(){
+    public LinkedHashMap<ItemBean,FlyingFragment> getAllTabs(){
         return TABS;
     }
 }

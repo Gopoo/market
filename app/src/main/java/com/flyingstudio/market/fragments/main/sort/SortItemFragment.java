@@ -29,7 +29,7 @@ public class SortItemFragment extends FlyingFragment {
 
     private static final String ITEM_ARG = "ITEM";
     private int TYPE;
-    private SortItemFragment(){}
+    public SortItemFragment(){}
     public static SortItemFragment newInstance(int type){
         Bundle bundle = new Bundle();
         bundle.putInt(ITEM_ARG,type);

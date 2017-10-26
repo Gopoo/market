@@ -55,6 +55,8 @@ public class UserProfileFragment extends FlyingFragment {
         List<UserProfileFileds> list = UserProfileFileds.creator()
                 .add("用户名",profile.getUsername())
                 .add("邮箱",profile.getEmail())
+                .add("地址","暂未设置")
+                .add("支付宝","暂未设置")
                 .add("联系方式",profile.getWechat())
                 .crate();
         ProfilesItemAdapter adapter = ProfilesItemAdapter.creat(list, new BaseQuickAdapter.OnItemClickListener() {

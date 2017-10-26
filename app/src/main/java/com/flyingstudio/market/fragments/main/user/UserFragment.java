@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.flyingstudio.fscore.app.AccountManger;
 import com.flyingstudio.fscore.app.ISigninCallBack;
-import com.flyingstudio.fscore.fragment.bottom.ItemFragment;
+import com.flyingstudio.fscore.fragment.FlyingFragment;
 import com.flyingstudio.fscore.utils.GlideUtil;
 import com.flyingstudio.market.R;
 import com.flyingstudio.market.database.DatabaseManger;
@@ -35,7 +35,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by guopu on 2017/10/11.
  */
 
-public class UserFragment extends ItemFragment {
+public class UserFragment extends FlyingFragment {
 
     @BindView(R.id.rv_options)
     RecyclerView mRecyclerView = null;
@@ -55,12 +55,16 @@ public class UserFragment extends ItemFragment {
         if (AccountManger.getSigninState()){
             getParentDelegate().getSupportDelegate().start(new UserProfileFragment());
         }else{
-            onClickNotSigninTip();
+            getParentDelegate().getSupportDelegate().start(new SigninFragment());
         }
     }
     @OnClick(R.id.tv_tips)
     public void onClickNotSigninTip(){
-        getParentDelegate().getSupportDelegate().start(new SigninFragment());
+        if (AccountManger.getSigninState()){
+            getParentDelegate().getSupportDelegate().start(new UserProfileFragment());
+        }else{
+            getParentDelegate().getSupportDelegate().start(new SigninFragment());
+        }
     }
     @Override
     public Integer setLayoutID() {
@@ -74,12 +78,6 @@ public class UserFragment extends ItemFragment {
         AccountManger.isAccountanSignin(new ISigninCallBack() {
             @Override
             public void onSignin() {
-                tips.setText("欢迎您！");
-                UserProfileDao dao = DatabaseManger.newInstance().getUserDao();
-                UserProfile p = dao.loadAll().get(0);
-                layout.setTitle(p.getUsername());
-                GlideUtil.loadImageViewSize(getContext()
-                    ,p.getAvatar(),150,150,userAvatar);
             }
             @Override
             public void onNotSignin() {
@@ -120,5 +118,13 @@ public class UserFragment extends ItemFragment {
     }
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, View rootView) {
+        if (AccountManger.getSigninState()){
+            tips.setText("欢迎您！");
+            UserProfileDao dao = DatabaseManger.newInstance().getUserDao();
+            UserProfile p = dao.loadAll().get(0);
+            layout.setTitle(p.getUsername());
+            GlideUtil.loadImageViewSize(getContext()
+                    ,p.getAvatar(),150,150,userAvatar);
+        }
     }
 }
