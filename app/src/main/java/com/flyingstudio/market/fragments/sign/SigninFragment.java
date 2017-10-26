@@ -40,7 +40,7 @@ public class SigninFragment extends FlyingFragment {
 
     @OnClick(R.id.link_signup)
     public void toSignup(){
-        start(new SignupFragment(),SINGLETASK);
+        getSupportDelegate().start(new SignupFragment(),SINGLETASK);
     }
     @OnClick(R.id.signin)
     public void onClickSignin(){
@@ -61,7 +61,7 @@ public class SigninFragment extends FlyingFragment {
             UserProfile profile = mockProfile();
             dao.insertOrReplace(profile);
             AccountManger.setAccountSignin();
-            this.pop();
+            getSupportDelegate().pop();
         }
     }
     private UserProfile mockProfile(){

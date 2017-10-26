@@ -40,7 +40,7 @@ public class SignupFragment extends FlyingFragment {
 
     @OnClick(R.id.link_signin)
     public void onClickToSignin(){
-        start(new SigninFragment(),SINGLETASK);
+        getSupportDelegate().start(new SigninFragment(),SINGLETASK);
     }
     @OnClick(R.id.signup)
     public void onClickSignup(){

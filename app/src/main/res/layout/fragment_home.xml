@@ -26,7 +26,7 @@
         app:elevation="5.0dip"
         app:fabSize="mini"
         app:layout_anchor="@id/srl_refresh"
-        app:layout_behavior="com.flyingstudio.taoerhuo.ui.behavior.FloatingButtonBehavior"
+        app:layout_behavior="com.flyingstudio.market.ui.behavior.FloatingButtonBehavior"
         app:layout_anchorGravity="bottom|right"
         app:pressedTranslationZ="10.0dip" />
 

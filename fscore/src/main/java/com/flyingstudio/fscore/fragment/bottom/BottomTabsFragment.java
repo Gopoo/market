@@ -10,15 +10,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.flyingstudio.fscore.R;
-
-import com.flyingstudio.fscore.R2;
 import com.flyingstudio.fscore.fragment.FlyingFragment;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import butterknife.BindView;
 
 
 /**
@@ -33,7 +30,6 @@ public abstract class BottomTabsFragment extends FlyingFragment implements View.
     //默认为灰色
     private int mNotPressedColor = 0xFF707070;
 
-    @BindView(R2.id.bottom_items)
     LinearLayout item_container = null;
     @ColorInt
     public  int setNotPressedColor(){
@@ -42,17 +38,17 @@ public abstract class BottomTabsFragment extends FlyingFragment implements View.
     public abstract void setTabs(BottomTabsHolder builder);
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (setNotPressedColor()!=-1){
-            mNotPressedColor = setNotPressedColor();
-        }
-        BottomTabsHolder builder = BottomTabsHolder.builder();
-        setTabs(builder);
-        TABS.putAll(builder.getAllTabs());
-        for (Map.Entry<ItemBean,ItemFragment> tab :TABS.entrySet()){
-        ITEMS_BEANS.add(tab.getKey());
-        ITEMS.add(tab.getValue());
-    }
+            super.onCreate(savedInstanceState);
+            if (setNotPressedColor()!=-1){
+                mNotPressedColor = setNotPressedColor();
+            }
+            BottomTabsHolder builder = BottomTabsHolder.builder();
+            setTabs(builder);
+            TABS.putAll(builder.getAllTabs());
+            for (Map.Entry<ItemBean,ItemFragment> tab :TABS.entrySet()){
+                ITEMS_BEANS.add(tab.getKey());
+                ITEMS.add(tab.getValue());
+            }
 }
 
     @Override
@@ -62,6 +58,7 @@ public abstract class BottomTabsFragment extends FlyingFragment implements View.
 
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, View rootView) {
+        item_container = rootView.findViewById(R.id.bottom_items);
         int size = TABS.size();
         for (int i = 0;i<size;i++){
             LayoutInflater.from(getContext()).inflate(R.layout.bottom_bean_layout,item_container);
@@ -91,7 +88,6 @@ public abstract class BottomTabsFragment extends FlyingFragment implements View.
             final LinearLayout item = (LinearLayout) item_container.getChildAt(i);
             final ImageView image = (ImageView) item.getChildAt(0);
             final TextView title = (TextView) item.getChildAt(1);
-
             image.setImageResource(ITEMS_BEANS.get(i).getPhoto());
             title.setTextColor(mNotPressedColor);
 

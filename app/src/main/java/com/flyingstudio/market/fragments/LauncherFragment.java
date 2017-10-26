@@ -25,7 +25,7 @@ public class LauncherFragment extends BaseLauncherFragment {
     public void onClick(){
         timer.cancel();
         timer = null;
-        startWithPop(new ContainerFragment());
+        getSupportDelegate().startWithPop(new ContainerFragment());
         extraTransaction()
                 .setCustomAnimations(R.animator.nullanim, R.animator.nullanim)
                 .startWithPop(new ContainerFragment());

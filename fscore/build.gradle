@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jakewharton.b' +
-        '' +
-        'utterknife'
+apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion 26
 
