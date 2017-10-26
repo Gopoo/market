@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">淘二货</string>
+    <string name="back">返回</string>
+    <string name="change_avatar">更换头像</string>
+    <string name="search_tips">搜索</string>
+    <string name="cart">购物车</string>
+    <string name="ours_qq">学生在线QQ: 2822301878</string>
+    <string name="not_sign_tips">您还未登录，点此去登录</string>
+    <string name="empty_tips">暂时木有内容呀～～</string>
+</resources>

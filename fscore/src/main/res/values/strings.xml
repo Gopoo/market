@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FSCore</string>
+    <string name="network_error">没网络啦，建议检查网络后下拉刷新</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="15dp"
+    android:background="@color/colorLight"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:id="@+id/iv_user_avatar"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/sp_14"
+        android:lines="1"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/app_name"
+        android:layout_toRightOf="@id/iv_user_avatar"
+        android:id="@+id/tv_user_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp" />
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorBottomDefault"
+        android:textSize="@dimen/sp_12"
+        android:lines="1"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:layout_toRightOf="@id/iv_user_avatar"
+        android:layout_below="@id/tv_user_nickname"
+        android:id="@+id/tv_post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp" />
+
+    <TextView
+        android:textColor="@color/colorTab"
+        android:textSize="@dimen/sp_16"
+        android:lines="1"
+        android:gravity="center_horizontal"
+        android:text="帮帮忙"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_alignTop="@+id/tv_user_nickname"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/dp_20"
+        android:padding="5dp"
+        android:ellipsize="end"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/sp_14"
+        android:lines="1"
+        android:gravity="center|left"
+        android:id="@+id/tv_inquiry_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_user_avatar"
+        android:layout_alignLeft="@id/iv_left_image"
+        android:layout_alignStart="@id/iv_left_image" />
+</RelativeLayout>

@@ -1,0 +1,36 @@
+{
+  "code":0,
+  "message":"ok",
+  "pages":5,
+  "current":1,
+  "data":[{
+    "id":"01",
+    "content":"电脑组装 上门服务",
+    "imageUrl":"https://img.alicdn.com/tps/i2/T1qEOpFg0fXXaf97Qy-190-177.png",
+    "price":"￥50"
+  },
+    {
+      "id":"02",
+      "content":"黑色 16g 国行正版 九成新没用多久 送充电套装加钢化膜 换了新机便宜出 已刷机需激活重新注册ID 和新的差不多 功能一切正常。不接受面交，只闲鱼上交易，都已实名认证，靠谱有保障些。",
+      "imageUrl":"https://img.alicdn.com/tps/i2/T1qEOpFg0fXXaf97Qy-190-177.png",
+      "price":"￥1650"
+    },
+    {
+      "id":"03",
+      "content":"白色 16g 国行正版 九成新没用多久 送充电套装加钢化膜 换了新机便宜出 已刷机需激活重新注册ID 和新的差不多 功能一切正常。不接受面交，只闲鱼上交易，都已实名认证，靠谱有保障些。",
+      "imageUrl":"https://img.alicdn.com/bao/uploaded/i4/6000000003034/TB27HaBdLnW1eJjSZFqXXa8sVXa_!!0-fleamarket.jpg_728x728.jpg",
+      "price":"￥1650"
+    },
+    {
+      "id":"04",
+      "content":"五颜六色 16g 国行正版 九成新没用多久 送充电套装加钢化膜 换了新机便宜出 已刷机需激活重新注册ID 和新的差不多 功能一切正常。不接受面交，只闲鱼上交易，都已实名认证，靠谱有保障些。",
+      "imageUrl":"https://img.alicdn.com/bao/uploaded/i4/6000000003034/TB27HaBdLnW1eJjSZFqXXa8sVXa_!!0-fleamarket.jpg_728x728.jpg",
+      "price":"￥1650"
+    },
+    {
+      "id":"05",
+      "content":"秋风萧色 16g 国行正版 九成新没用多久 送充电套装加钢化膜 换了新机便宜出 已刷机需激活重新注册ID 和新的差不多 功能一切正常。不接受面交，只闲鱼上交易，都已实名认证，靠谱有保障些。",
+      "imageUrl":"https://img.alicdn.com/bao/uploaded/i4/6000000003034/TB27HaBdLnW1eJjSZFqXXa8sVXa_!!0-fleamarket.jpg_728x728.jpg",
+      "price":"￥1650"
+    }]
+}

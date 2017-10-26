@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_app_bar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.CollapsingToolbarLayout
+            app:paddingStart="0dp"
+            app:collapsedTitleGravity="center"
+            app:collapsedTitleTextAppearance="@style/TopBarTextStyle"
+            app:titleEnabled="false"
+            android:background="@null"
+            android:id="@+id/tb_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/iv_user_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+            <android.support.v7.widget.Toolbar
+                android:alpha="0.5"
+                android:background="#1296db"
+                app:contentInsetStart="0dp"
+                app:titleTextAppearance="@style/TopBarTextStyle"
+                app:titleTextColor="@color/colorLight"
+                app:layout_collapseMode="pin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:clickable="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="@dimen/default_text_size"
+                        android:gravity="center"
+                        android:text="@string/back"
+                        android:textColor="@color/colorLight"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:clickable="true"
+                        android:layout_alignParentRight="true"
+                        android:textSize="@dimen/default_text_size"
+                        android:gravity="center"
+                        android:text="@string/change_avatar"
+                        android:textColor="@color/colorLight"
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_user_profiles"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</android.support.design.widget.CoordinatorLayout>

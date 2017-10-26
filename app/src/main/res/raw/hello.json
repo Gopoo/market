@@ -1,0 +1,16 @@
+{
+  "code":0,
+  "message":"ok",
+  "banner":{
+    "imgUrl":[
+
+    ]
+  },
+  "data":{
+    "userId":1,
+    "wechat":"123456",
+    "email":"praia123@163.com",
+    "avator":"http://www.xasdhcuiasgc.com/sdhashd.jpg",
+    "token":"sadaso12748hdfy70r90j"
+  }
+}

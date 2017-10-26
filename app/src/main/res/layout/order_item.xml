@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginBottom="2dp"
+    android:background="@color/colorLight"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:id="@+id/iv_goods_img"
+        android:layout_alignParentLeft="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:textColor="@color/colorBottomDefault"
+        android:textSize="@dimen/sp_14"
+        android:id="@+id/tv_goods_content"
+        android:layout_marginLeft="10dp"
+        android:lines="2"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:layout_toRightOf="@id/iv_goods_img"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:gravity="bottom|left"
+        android:paddingBottom="10dp"
+        android:id="@+id/tv_goods_price"
+        android:lines="1"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/iv_goods_img"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/tv_goods_content"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+    <TextView
+        android:gravity="bottom|right"
+        android:paddingBottom="10dp"
+        android:id="@+id/tv_order_time"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorBottomLine"
+        android:textSize="@dimen/sp_12"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toRightOf="@id/tv_goods_price"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/tv_goods_content"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+</RelativeLayout>
